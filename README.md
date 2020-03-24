@@ -1,1 +1,2 @@
-# pallete-northmelbourne
+# Palette
+Beautifully static
