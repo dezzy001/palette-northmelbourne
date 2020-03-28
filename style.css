@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+/* CSS variables */
+:root {
+    --color-primary: rgb(217, 182, 189);
+    --color-secondary: rgb(242, 196, 147);
+}
+
 /* TEST */
 #back-to-test {
     background-color: black;
@@ -61,4 +67,20 @@
     to {
         opacity: 1;
     }
+}
+
+/* Location */
+#location-container {
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+}
+
+#location-container iframe {
+    height: 80%;
+    min-width: 200px;
+    width: 300px;
 }
