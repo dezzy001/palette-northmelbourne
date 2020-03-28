@@ -1,0 +1,10 @@
+#logo-container {
+    background-image: url("https://instagram.fsyd4-1.fna.fbcdn.net/v/t51.2885-15/e35/84350676_574294913443192_5667935231911343596_n.jpg?_nc_ht=instagram.fsyd4-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=NyPn7d3ofZ4AX8jvvge&oh=70d34eef08af0b66c27d221febe1b243&oe=5EA840DC");
+}
+
+#logo-border {
+    stroke-dasharray: 822px;
+    stroke-dashoffset: 822px;
+    opacity: 0.2;
+    animation: line-animation ease-out forwards 3s;
+}

@@ -1,0 +1,10 @@
+#logo-container {
+    background-image: url("https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+#logo rect {
+    stroke-dasharray: 822px;
+    stroke-dashoffset: 822px;
+    opacity: 0.2;
+    animation: line-animation ease-out forwards 3s;
+}
