@@ -6,5 +6,5 @@
     stroke-dasharray: 822px;
     stroke-dashoffset: 822px;
     opacity: 0.2;
-    animation: line-animation ease-out forwards 3s;
+    animation: line-animation ease-in-out forwards 3s;
 }
