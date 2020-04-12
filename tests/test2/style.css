@@ -1,14 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica sans-serif;
+}
+
+/* CSS variables */
+:root {
+    --color-primary: rgb(217, 182, 189);
+    --color-secondary: rgb(242, 196, 147);
+}
+
+/* LOGO */
+
 #landing-container {
     background-image: url("https://instagram.fsyd4-1.fna.fbcdn.net/v/t51.2885-15/e35/84350676_574294913443192_5667935231911343596_n.jpg?_nc_ht=instagram.fsyd4-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=NyPn7d3ofZ4AX8jvvge&oh=70d34eef08af0b66c27d221febe1b243&oe=5EA840DC");
     /* background-size: cover; */
     background-position: center center;
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
-#logo-border {
+#logo rect {
     stroke-dasharray: 822px;
     stroke-dashoffset: 822px;
     opacity: 0.2;
-    animation: line-animation ease-out forwards 3s;
+    animation: line-animation ease-in-out forwards 3s;
+}
+
+#logo path {
+    /* stroke-dasharray: 1px; */
+    opacity: 0;
+    animation: opacity-fade-in ease-in forwards 2s;
+    animation-delay: 0.3s;
+}
+
+@keyframes line-animation {
+    from {
+        /* opacity: 0.2; */
+    }
+    to {
+        stroke-dashoffset: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes opacity-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#location-container {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+}
+
+#location-container iframe {
+    height: 80%;
+    min-width: 200px;
+    width: 300px;
 }
