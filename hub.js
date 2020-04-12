@@ -8,7 +8,6 @@ cards.forEach((card) => {
     if (preview_trigger) {
         preview_trigger.addEventListener("click", (event) => {
             demo_iframe.src =
-                "/" +
                 C_TEST_DIRECTORY +
                 "/" +
                 card.querySelector("a").id +
