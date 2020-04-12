@@ -1,4 +1,7 @@
-/* HUB */
+/* Delete all refereces to this file common_test.css for the actual website.
+   This is bad practice, and only used for development convenience */
+
+/* Back to HUB */
 
 #back-to-test {
     background-color: black;
