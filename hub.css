@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
 :root {
     /* CSS variables */
+    --link-color: #eb6060;
+    --link-color-hover: red;
+    --link-border: 2px solid var(--link-color);
 }
 
 /* HUB */
@@ -10,13 +19,13 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    /* display: inline; */
-    height: 50px;
-    width: 50px;
+    /* height: 50px;
+    width: 50px; */
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     opacity: 0.7;
+    padding: 5px;
 }
 
 #back-to-test:hover {
@@ -46,21 +55,30 @@ header {
     flex-direction: column;
     background-color: var(--color-primary);
     opacity: 0.6;
+    padding: 5px;
 }
 
 .card a {
     text-decoration: none;
-    color: red;
+    color: var(--link-color);
+    padding: 2px;
     font-size: 1.5rem;
+    border: 2px solid var(--link-color);
+    margin: 2.5px 0;
+}
+
+.card .card-link:hover {
+    color: var(--link-color-hover);
+    cursor: pointer;
+    border-color: var(--link-color-hover);
 }
 
 .card .preview {
     font-size: 1.5rem;
-}
-
-.card .preview:hover {
-    color: red;
-    cursor: crosshair;
+    border: 2px solid var(--link-color);
+    color: var(--link-color);
+    margin: 2.5px 0;
+    padding: 2px;
 }
 
 .card:hover {
