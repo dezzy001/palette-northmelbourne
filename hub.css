@@ -1,3 +1,7 @@
+:root {
+    /* CSS variables */
+}
+
 /* HUB */
 
 #back-to-test {
@@ -38,7 +42,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2rem;
     flex-direction: column;
     background-color: var(--color-primary);
     opacity: 0.6;
@@ -46,9 +50,44 @@ header {
 
 .card a {
     text-decoration: none;
+    color: red;
+    font-size: 1.5rem;
+}
+
+.card .preview {
+    font-size: 1.5rem;
+}
+
+.card .preview:hover {
+    color: red;
+    cursor: crosshair;
 }
 
 .card:hover {
     transform: translateY(-3px) scale(1.1);
     opacity: 1;
+}
+
+/* DEMO */
+#demo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+#demo-container iframe {
+    /* Dimensions fro Galaxy S5 */
+    width: 360px;
+    height: 640px;
+    background-color: rgba(235, 235, 235, 1);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 500px) {
+    #demo-container iframe {
+        width: 100%;
+    }
 }

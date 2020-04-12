@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Palette</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="hub.css" />
+        <link rel="stylesheet" href="/common_test.css" />
+        <link rel="stylesheet" href="/hub.css" />
         <link
             rel="shortcut icon"
             href="assets/graphic_logo_icon.svg"
@@ -86,21 +86,37 @@
                 </defs>
             </svg>
 
-            <h1>Testing Landing page</h1>
+            <h1>Palette Test Hub</h1>
         </header>
 
         <section class="basic-grid">
-            <div class="card"><a href="tests/test1/test1.html">Test 1</a></div>
-            <div class="card"><a href="tests/test2/test2.html">Test 2</a></div>
+            <div class="card">
+                <h1>Test 1</h1>
+                <a href="/tests/test1/index.html" id="test1">Visit Here!</a>
+                <small class="preview">click here for preview!</small>
+            </div>
+            <div class="card">
+                <h1>Test 2</h1>
+                <a href="/tests/test2/index.html" id="test2">Visit Here!</a>
+                <small class="preview">click here for preview!</small>
+            </div>
+            <div class="card">
+                <h1>Test 3</h1>
+                <a href="/tests/test3/index.html" id="test3">Visit Here!</a>
+                <small class="preview">click here for preview!</small>
+            </div>
             <div class="card">
                 <a href="https://github.com/dezzy001/palette-northmelbourne"
                     >Github Repo Here!</a
                 >
             </div>
-            <div class="card">
-                <!-- <img src="https://instagram.fsyd4-1.fna.fbcdn.net/v/t51.2885-15/e35/89612633_162313978130505_785544447024586903_n.jpg?_nc_ht=instagram.fsyd4-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=XbeNYnP4O_UAX_Fqbow&oh=1f45a8eddb0d198e3031f104e7e0f60a&oe=5EAA8246"
-                alt="Instagram img"> -->
-            </div>
         </section>
+
+        <section id="demo-container">
+            <h1>PREVIEW</h1>
+            <iframe src="" frameborder="0"></iframe>
+        </section>
+
+        <script src="/hub.js" defer></script>
     </body>
 </html>
