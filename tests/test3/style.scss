@@ -63,6 +63,20 @@ header {
         color: var(--color-primary);
         cursor: pointer;
     }
+
+    .nav-link::after {
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: var(--color-primary);
+        opacity: 0.8;
+        display: block;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+        transition: width 0.5s ease-out;
+    }
 }
 
 button {
