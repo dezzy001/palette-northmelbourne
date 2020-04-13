@@ -3,7 +3,7 @@ if (inIframe()) {
     const back_to_test = document.querySelector("#back-to-test");
     back_to_test.style.display = "none";
 } else {
-    console.log("NOT IFRAME");
+    // console.log("NOT IFRAME");
 }
 
 function inIframe() {

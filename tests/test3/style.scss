@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
+    background-color: #fff;
 }
 
 :root {
@@ -54,7 +55,7 @@ header {
     }
 
     .nav-link {
-        color: black;
+        color: #6f645b;
         transition: all 0.3s ease 0s;
     }
 
@@ -87,9 +88,49 @@ button:hover {
     height: 90px;
 }
 
-// Animation keyframes
+// MENU ICON
+#fixed-menu-icon-container {
+    position: fixed;
+    top: 50vh;
+    left: 20px;
+    padding: 16px;
+    background-color: white;
+    opacity: 1;
+    border: 3px solid var(--color-primary);
+    border-radius: 100%;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+
+    // transition: transform 0.5s linear;
+
+    .menu-icon-closed {
+        // position: relative;
+        transition: transform 0.3s cubic-bezier(0.28, 1.84, 0.42, 1);
+        height: 70px;
+        width: 70px;
+    }
+    .menu-icon-closed:hover {
+        // transform: translate(10px, 0px);
+        transform: rotate(-20deg);
+        cursor: pointer;
+    }
+}
+
+// Key Frame Animation
 
 // Media Queries
 
 @media screen and (max-width: 800px) {
+    #fixed-menu-icon-container {
+        top: auto;
+        left: auto;
+        right: 20px;
+        bottom: 20px;
+
+        .menu-icon-closed {
+            // position: relative;
+            transition: transform 0.3s cubic-bezier(0.28, 1.84, 0.42, 1);
+            max-height: 40px;
+            max-width: 40px;
+        }
+    }
 }

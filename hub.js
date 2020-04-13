@@ -13,6 +13,8 @@ cards.forEach((card) => {
                 card.querySelector("a").id +
                 "/" +
                 C_TEST_ENTRY_HTML;
+            demo_iframe.style.backgroundColor = "none";
+            console.log(demo_iframe.style.backgroundColor);
         });
     }
 });

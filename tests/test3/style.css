@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
+  background-color: #fff;
 }
 
 :root {
@@ -46,7 +47,7 @@ header .navbar-item {
   padding: 0px 25px;
 }
 header .nav-link {
-  color: black;
+  color: #6f645b;
   transition: all 0.3s ease 0s;
 }
 header .nav-link:hover {
@@ -75,6 +76,41 @@ button:hover {
 #navbar-logo {
   width: 90px;
   height: 90px;
+}
+
+#fixed-menu-icon-container {
+  position: fixed;
+  top: 50vh;
+  left: 20px;
+  padding: 16px;
+  background-color: white;
+  opacity: 1;
+  border: 3px solid var(--color-primary);
+  border-radius: 100%;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+}
+#fixed-menu-icon-container .menu-icon-closed {
+  transition: transform 0.3s cubic-bezier(0.28, 1.84, 0.42, 1);
+  height: 70px;
+  width: 70px;
+}
+#fixed-menu-icon-container .menu-icon-closed:hover {
+  transform: rotate(-20deg);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #fixed-menu-icon-container {
+    top: auto;
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+  }
+  #fixed-menu-icon-container .menu-icon-closed {
+    transition: transform 0.3s cubic-bezier(0.28, 1.84, 0.42, 1);
+    max-height: 40px;
+    max-width: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

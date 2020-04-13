@@ -12,6 +12,10 @@
     --link-color-inverse-hover: red;
     --link-border: 2px solid var(--link-color);
     --color-primary: rgb(217, 182, 189);
+
+    /*     mobile demo screen size */
+    --mobile-demo-height: 640px;
+    --mobile-demo-width: 360px;
 }
 
 header {
@@ -91,14 +95,15 @@ header {
     background: rgb(240, 240, 240);
     background: radial-gradient(
         circle,
-        rgba(240, 240, 240, 1) 0%,
-        rgba(255, 255, 255, 1) 50%,
-        rgba(240, 240, 240, 1) 100%
+        rgba(255, 255, 255, 1) 0%,
+        rgba(240, 240, 240, 1) 50%,
+        rgba(255, 255, 255, 1) 100%
     );
 }
 
 #demo-mobile-site {
     position: relative;
+    width: 360px;
 }
 
 #demo-mobile-site::before {
@@ -139,8 +144,8 @@ header {
 
 #demo-container iframe {
     /* Dimensions fro Galaxy S5 */
-    width: 360px;
-    height: 640px;
+    width: var(--mobile-demo-width);
+    height: var(--mobile-demo-height);
     background-color: rgba(235, 235, 235, 1);
 }
 
