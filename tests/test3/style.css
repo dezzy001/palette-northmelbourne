@@ -39,7 +39,7 @@ header button {
   font-size: 16px;
   text-decoration: none;
 }
-header .navbar-nav {
+header .navbar-list {
   list-style: none;
 }
 header .navbar-item {
@@ -111,7 +111,30 @@ button:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+}
+
+.photo-grid-card {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 768px) {
+  /* Styles */
   #fixed-menu-icon-container {
     top: auto;
     left: auto;
@@ -123,6 +146,37 @@ button:hover {
     max-height: 40px;
     max-width: 40px;
   }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .photo-grid-card-tall {
+    grid-row: 2 span/auto;
+  }
+
+  .photo-grid-card-wide {
+    grid-column: 2 span/auto;
+  }
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
 }
 
 /*# sourceMappingURL=style.css.map */
