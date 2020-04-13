@@ -8,6 +8,73 @@
 
 :root {
   /* CSS VARALIBES */
+  --color-primary: rgb(217, 182, 189);
+  --color-secondary: rgb(242, 196, 147);
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+}
+header li,
+header a,
+header button {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+header .navbar-nav {
+  list-style: none;
+}
+header .navbar-item {
+  display: inline-block;
+  padding: 0px 25px;
+}
+header .nav-link {
+  color: black;
+  transition: all 0.3s ease 0s;
+}
+header .nav-link:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 25px;
+  margin: 0px 10px;
+  opacity: 0.8;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+button:hover {
+  background-color: var(--color-primary);
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+#navbar-logo {
+  width: 90px;
+  height: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */
