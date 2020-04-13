@@ -129,6 +129,13 @@ button:hover {
     }
 }
 
+// Photo Gallery
+.photo-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 // Key Frame Animation
 
 // Media Queries
