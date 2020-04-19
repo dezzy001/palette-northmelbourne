@@ -12,6 +12,7 @@
     /* CSS VARALIBES */
     --color-primary: rgb(217, 182, 189);
     --color-secondary: rgb(242, 196, 147);
+    --text-color-primary: rgb(10, 10, 10);
 }
 
 // Scroll Bar
@@ -20,7 +21,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #fff;
+    background: rgb(235, 235, 235);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -28,13 +29,37 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-// NAVIGATION BAR
+// MISC CLASSES
+.hide {
+    display: none;
+}
+
+.button-primary {
+    padding: 10px 25px;
+    margin: 0px 10px;
+    opacity: 0.8;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary);
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+// HEADER
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 5%;
+    height: 15vh;
 
     li,
     a,
@@ -45,6 +70,7 @@ header {
         text-decoration: none;
     }
 
+    // NAVIGATION BAR
     .navbar-list {
         list-style: none;
     }
@@ -79,27 +105,66 @@ header {
     }
 }
 
-button {
-    padding: 10px 25px;
-    margin: 0px 10px;
-    opacity: 0.8;
-    background-color: var(--color-primary);
-    border: none;
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
-    color: white;
-}
-
-button:hover {
-    background-color: var(--color-primary);
-    opacity: 1;
-    cursor: pointer;
-    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
-}
+// BUTTONS
 
 #navbar-logo {
     width: 90px;
     height: 90px;
+}
+
+// MAIN - Landing Content
+#landing-container {
+    background-image: url("https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-attachment: local;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        background-color: transparent;
+        position: relative;
+        left: -20%;
+        top: -20%;
+        color: var(--text-color-primary);
+        word-wrap: break-word;
+        padding: 0 1rem;
+        // font-weight: 500;
+    }
+
+    span {
+        font-weight: bold;
+        color: var(--color-primary);
+    }
+}
+
+// Our Story Container
+
+#our-story-container {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+    .text-container {
+        text-align: center;
+        margin: 5rem 10%;
+    }
+
+    .our-story-image {
+        max-width: 80%;
+        margin-top: 5rem;
+    }
 }
 
 // MENU ICON
@@ -113,6 +178,7 @@ button:hover {
     border: 3px solid var(--color-primary);
     border-radius: 100%;
     box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+    animation: fadein 1s ease-out;
 
     // transition: transform 0.5s linear;
 
@@ -143,6 +209,16 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+// Footer
+
+#footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 5rem 5px;
+}
+
 // Media Queries : Template used from - https://gist.github.com/marcobarbosa/798569
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -158,6 +234,14 @@ button:hover {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 768px) {
     /* Styles */
+    // MAIN - Landing Content
+    #landing-container {
+        h1 {
+            position: static;
+            background-color: transparent;
+            color: var(--color-primary);
+        }
+    }
     #fixed-menu-icon-container {
         top: auto;
         left: auto;
@@ -188,9 +272,17 @@ button:hover {
     /* Styles */
 }
 
+@media only screen and (max-device-width: 768px) {
+    // Styles
+    .navbar-list {
+        display: none;
+    }
+}
+
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
     /* Styles */
+
     .photo-grid-card-tall {
         grid-row: 2 span / auto; // => start / end
     }
@@ -212,3 +304,11 @@ button:hover {
 }
 
 // Key Frame Animation
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
